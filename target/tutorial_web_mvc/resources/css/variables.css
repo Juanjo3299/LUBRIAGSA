@@ -1,0 +1,14 @@
+:root{
+    --primary-color: #FB771A;
+    --secondary-color: #FCA252;
+    --danger-color: #FC692F;
+    --success-color: #63E04A;
+    --warning-color: #F9E722;
+    --info-color: #179DEF;
+    --complementary-color: #6d6d6d;
+    --icons-color: white;
+    --icons-color-2: black;
+    
+    --font-size-title: 36px;
+    --font-size-complementary: 24px
+}

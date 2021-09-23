@@ -1,0 +1,10 @@
+com\mx\proyecto\controller\PersonaTestController.class
+com\mx\proyecto\helpers\Utilerias.class
+com\mx\proyecto\dao\PersonaTestRepository.class
+com\mx\proyecto\dao\GenerarOrdenRepository.class
+com\mx\proyecto\dao\Objeto_test.class
+com\mx\proyecto\config\Routes.class
+com\mx\proyecto\controller\loginController.class
+com\mx\proyecto\controller\EjemploController.class
+com\mx\proyecto\entities\PersonaTest.class
+com\mx\proyecto\controller\ProcesosController.class

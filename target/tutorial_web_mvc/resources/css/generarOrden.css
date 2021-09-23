@@ -1,0 +1,79 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16/09/2021, 11:16:23 AM
+    Author     : Juan Mendez
+*/
+.titulos h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.pageContainer .containerTop div label {
+    margin-left: 10px;
+    margin-right: 5px;
+    width: 10%;
+}
+
+
+.pageContainer .containerTop .comprador select {
+    width: 100%;
+}
+
+.pageContainer .containerTop .comprador {
+    width: 20%
+}
+
+/*
+
+*/
+.pageContainer .containerTop .tc {
+    width: 50px;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-orange {
+
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border: 0;
+    transition: 0.3s;
+
+}
+
+.button-orange:hover {
+    transform: scale(1.03);
+}
+
+/*
+
+
+
+.pageContainer .containerTop .moneda{
+    width: 7%
+}*/
+
+/*
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+bottom: .5em;
+}*/

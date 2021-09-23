@@ -1,0 +1,47 @@
+.pageContainer{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pageContainer h1{
+    margin: 20px;
+    font-weight: bold;
+}
+
+.pageContainer .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: auto;
+    margin: 20px;
+}
+.pageContainer .logo img{
+
+}
+#formNuevaPersona,
+#formActualizarPersona{
+    padding: 10px 20px;    
+}
+#formNuevaPersona .content,
+#formActualizarPersona .content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#formNuevaPersona .input-group,
+#formActualizarPersona .input-group{
+    width: 47%;
+    margin-bottom: 15px;
+}
+#formNuevaPersona footer,
+#formActualizarPersona footer{
+    width: 20%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    
+}
