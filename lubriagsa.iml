@@ -4,7 +4,10 @@
     <facet type="jpa" name="JPA">
       <configuration>
         <setting name="validation-enabled" value="true" />
-        <datasource-mapping />
+        <datasource-mapping>
+          <factory-entry name="carmelo.spring_tutorial_web_mvc_war_1.0PU" value="3583a81b-1977-44e8-ab23-403dbea75bae" />
+          <factory-entry name="noname-a.xml@0" value="3583a81b-1977-44e8-ab23-403dbea75bae" />
+        </datasource-mapping>
         <naming-strategy-map />
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>

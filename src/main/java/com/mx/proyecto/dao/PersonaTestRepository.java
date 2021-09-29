@@ -5,7 +5,6 @@
  */
 package com.mx.proyecto.dao;
 
-import com.mx.proyecto.entities.PersonaTest;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
@@ -13,6 +12,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
+
+import com.mx.proyecto.entities.PersonaTest;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ImportResource;

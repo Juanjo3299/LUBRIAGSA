@@ -59,8 +59,37 @@ public class GenerarOrdenRepository {
         return jdbcTemplate.queryForList(query);
     }
 
-    public List<Map<String, Object>> findDetRequisiciones(String folio) {
-        String query = "execute dbo.findDetRequisiciones '"+folio+"'";
+    public List<Map<String, Object>> findDetRequisiciones(String folios) {
+        String query = "SELECT  \n" +
+                "RC_FOLIO AS FOLIO,\n" +
+                "Producto.Pr_Cve_Producto AS PRODUCTO,\n" +
+                "Producto.Pr_Descripcion,\n" +
+                "Requisicion_Compra.Rc_Cantidad_1 AS CANTIDAD,\n" +
+                "Producto.Pv_Cve_Proveedor AS PROVEEDOR,\n" +
+                "Proveedor.Pv_Descripcion AS PROVEEDOR_DESCRIPCION,\n" +
+                "Producto.Pr_Ultimo_Precio_Compra AS ULTIMO_PRECIO,\n" +
+                "Producto_Codigo_Proveedor.Pcp_Descuento AS [%DESCUENTO]\n" +
+                "FROM  Requisicion_Compra\n" +
+                "INNER JOIN Producto ON Requisicion_Compra.Pr_Cve_Producto=Producto.Pr_Cve_Producto\n" +
+                "INNER JOIN Proveedor ON Producto.Pv_Cve_Proveedor=Proveedor.Pv_Cve_Proveedor\n" +
+                "INNER JOIN Producto_Codigo_Proveedor ON Requisicion_Compra.Pr_Cve_Producto=Producto_Codigo_Proveedor.Pr_Cve_Producto\n" +
+                "WHERE Requisicion_Compra.Rc_Folio in ("+folios+")";
+        return jdbcTemplate.queryForList(query);
+    }
+
+    public List<Map<String, Object>> findAllProveedoresByProducto(String idProducto) {
+        String query = "SELECT \n" +
+                "proveedor.Pv_Cve_Proveedor as CVE_PROVEEDOR,\n" +
+                "proveedor.pv_descripcion as PROVEEDOR_DESCRIPCION,\n" +
+                "producto.Pr_Descripcion_Corta as codigo_lubri,\n" +
+                "producto.pr_descripcion as PRODUCTO,\n" +
+                "producto.pr_cve_producto as clave_interna,\n" +
+                "pcp.Pcp_Descuento as DESCUENTO\n" +
+                "FROM Producto_Codigo_Proveedor pcp\n" +
+                "\n" +
+                "INNER JOIN producto on pcp.pr_cve_producto = producto.Pr_Cve_Producto\n" +
+                "INNER JOIN proveedor on pcp.pv_cve_proveedor= proveedor.pv_Cve_proveedor\n" +
+                "WHERE producto.Pr_Cve_Producto in ("+idProducto+")";
         System.out.println(query);
         return jdbcTemplate.queryForList(query);
     }
@@ -72,7 +101,6 @@ public class GenerarOrdenRepository {
             Logger.getLogger(Objeto_test.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
 
 
 }

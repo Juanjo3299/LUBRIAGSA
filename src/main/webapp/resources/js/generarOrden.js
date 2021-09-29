@@ -6,6 +6,7 @@ const selectTipoMoneda = document.getElementById('tipo-moneda');
 
 // Inputs
 const tipoDeCambio = document.getElementById('tipo-cambio');
+const observaciones = document.getElementById('observaciones');
 
 // Fechas
 const fechaAlta = document.getElementById('date-fecha-alta');
@@ -23,21 +24,47 @@ btnCargarProductos.addEventListener('click', () => {
     const rows = $(tablaRequisiciones.$('input[type="checkbox"]:checked').map(function () {
         return $(this).closest('tr');
     }));
+    console.log(rows)
     let folios = [];
     rows.each((i, item) => {
+        console.log(item)
         folios.push(item[0].innerText.substr(1, 10))
-        console.log(item[0].innerText.substr(1, 10));
+        //console.log(item[1].innerText.substr(1, 10));
     })
     console.log(folios);
 
-    // Cargar datos seleccionados
-    let requisiciones = document.querySelectorAll("input[name='requisiciones']:checked");
-    console.log(requisiciones)
-    if (requisiciones === null) {
-        return errorAlert('No se han seleccionado requisiciones', 'Seleccione al menos una requisicion de la tabla');
-    } else {
-        console.log(requisiciones);
-    }
+   let foliosCadena = '';
+    folios.map((element, i) => {
+        console.log(i)
+        console.log(folios.length)
+        if (i+1 === folios.length)
+            foliosCadena += `'${element}'`;
+        else
+            foliosCadena += `'${element}',`;
+   });
+
+    const a = document.createElement('a');
+    a.href = '/lubriagsa/procesos/guardarOrden.do?folios=' + encodeURI(foliosCadena);
+    console.log('/lubriagsa/procesos/guardarOrden.do?folios=' + encodeURI(foliosCadena));
+    a.click();
+
+    // $.ajax('/lubriagsa/procesos/guardarOrden.do', {
+    //     method: 'GET',
+    //     dataType: 'json',
+    //     timeout: 0,
+    //      data: {folios: foliosCadena},
+    //     success: function(response) {
+    //         console.log(response)
+    //     }
+    // }).done((response) => {
+    //     console.log("esta entrando")
+    //     console.log(response)
+    //     window.location.replace(response);
+    // }).fail((error) => {
+    //     console.log(error)
+    //     console.log("fallla :(")
+    // });
+
 
 })
 
@@ -94,7 +121,7 @@ selectTipoMoneda.addEventListener('change', () => {
 $.ajax('/lubriagsa/procesos/findAllRequisiciones.do', {
     method: 'GET',
     dataType: 'json',
-    timeout: 0
+    timeout: 0,
 }).done((response) => {
     llenarTablaRequisiciones(response.data)
 })

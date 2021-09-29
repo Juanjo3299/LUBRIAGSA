@@ -66,7 +66,7 @@
                 <div class="mt-2 row form-group">
                     <label class="col-sm-2" ><b>OBSERVACIONES</b></label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control"/>
+                        <input id="observaciones" type="text" class="form-control"/>
                     </div>
                 </div>
             </div>
@@ -103,7 +103,7 @@
                         <h3><b>REQUISICIONES DE COMPRA</b></h3>
                     </div>
                     <div>
-                        <table id="tabla-requisiciones" class="table  table-hover table-bordered table-sm"  cellspacing="0"
+                        <table id="tabla-requisiciones" class="table display nowrap  table-hover table-bordered table-sm"  cellspacing="0"
                                cellpadding="5">
                             <thead>
                                 <tr>

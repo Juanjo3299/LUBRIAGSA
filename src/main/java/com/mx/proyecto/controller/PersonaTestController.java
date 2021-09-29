@@ -2,7 +2,6 @@ package com.mx.proyecto.controller;
 import com.mx.proyecto.dao.PersonaTestRepository;
 import com.mx.proyecto.entities.PersonaTest;
 import com.mx.proyecto.helpers.Utilerias;
-import java.math.BigDecimal;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

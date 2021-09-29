@@ -26,6 +26,11 @@
 
 <script src="<c:url value="/resources/js/libs/datepicker/js/bootstrap-datepicker.js" />"></script>
 
-<script src="<c:url value="/resources/js/libs/datepicker/locales/bootstrap-datepicker.es.min.js" />"></script><!--
+<script src="<c:url value="/resources/js/libs/datepicker/locales/bootstrap-datepicker.es.min.js" />"></script>
+<script src="<c:url value="/resources/js/libs/dataTables.select.min.js" />"></script>
+<script src="<c:url value="/resources/js/libs/dataTables.buttons.min.js" />"></script>
+<script src="<c:url value="/resources/js/libs/dataTables.editor.min.js" />"></script>
+<%--<script src="<c:url value="/resources/js/libs/dataTables.checkboxes.min.js" />"></script>--%>
+<!--
 
 <script src="<c:url value="/resources/js/libs/bootstrap.bundle.min.js" />"></script>-->

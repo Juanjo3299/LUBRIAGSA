@@ -117,7 +117,7 @@
                     <a href="#" class="feat-btn-users">PROCESOS</a>
                 </div>
                 <ul class="submenus">
-                    <li><a href="/crm/giro/index.do">GENERAR</a></li>
+                    <li><a href="/lubriagsa/procesos/generar.do">GENERAR</a></li>
                     <li><a href="/crm/origen/index.do">EDITAR</a></li>
                     <li><a href="/crm/tipo_evento/index.do">CANCELAR</a></li>
                 </ul>

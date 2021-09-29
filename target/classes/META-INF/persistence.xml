@@ -4,12 +4,29 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <non-jta-data-source>jdbc/lubriagsa</non-jta-data-source>
     <class>com.mx.proyecto.entities.PersonaTest</class>
-    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+      <class>com.mx.proyecto.entities.Sucursal</class>
+      <class>com.mx.proyecto.entities.Estado</class>
+      <class>com.mx.proyecto.entities.Producto</class>
+      <class>com.mx.proyecto.entities.Comprador</class>
+      <class>com.mx.proyecto.entities.Proveedor</class>
+      <class>com.mx.proyecto.entities.Talla</class>
+      <class>com.mx.proyecto.entities.Color</class>
+      <class>com.mx.proyecto.entities.Moneda</class>
+      <class>com.mx.proyecto.entities.OrdenCompra</class>
+      <class>com.mx.proyecto.entities.OrdenCompraDescuento</class>
+      <class>com.mx.proyecto.entities.OrdenCompraImpuesto</class>
+      <class>com.mx.proyecto.entities.RequisicionCompra</class>
+      <class>com.mx.proyecto.entities.ProductoCodigoProveedor</class>
+      <class>com.mx.proyecto.entities.OrdenCompraCentroCosto</class>
+      <class>com.mx.proyecto.entities.SucursalProveedor</class>
+      <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://localhost;databaseName=LUBRIAGSA"/>
       <property name="javax.persistence.jdbc.user" value="sa"/>
       <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
       <property name="javax.persistence.jdbc.password" value="123"/>
+        <property name="eclipselink.jdbc.url" value="jdbc:sqlserver://localhost:1433;database=LUBRIAGSA"/>
+        <property name="eclipselink.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
     </properties>
   </persistence-unit>
 </persistence>

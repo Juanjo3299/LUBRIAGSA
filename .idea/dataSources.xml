@@ -8,5 +8,16 @@
       <jdbc-url>jdbc:sqlserver://localhost:1433;database=LUBRIAGSA</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="carmelo.spring_tutorial_web_mvc_war_1.0PU/EclipseLink" uuid="bb1680f3-0425-472f-8ca3-ec2b19dc33ec">
+      <driver-ref>sqlserver.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>EclipseLink
+
+D:/Documentos/IntellijProjects/lubriagsa/src/main/resources/META-INF/persistence.xml</remarks>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://localhost:1433;database=LUBRIAGSA</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

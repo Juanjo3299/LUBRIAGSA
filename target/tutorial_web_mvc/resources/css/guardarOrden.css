@@ -4,6 +4,14 @@ div.dataTables_wrapper {
     margin: 0 auto;
 }
 
+#btnCloseModal{
+    background-color: red;
+}
+
+#btnGuardarProducto{
+    background-color: var(--success-color);
+}
+
 #tabla-resumen{
     width: 600px;
 }
